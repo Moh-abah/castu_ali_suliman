@@ -1,0 +1,128 @@
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    transition: all 0.3s ease;
+    padding: var(--spacing-md) 0;
+}
+
+.scrolled {
+    background-color: var(--background);
+    box-shadow: 0 4px 6px -1px var(--card-shadow);
+    padding: var(--spacing-sm) 0;
+    backdrop-filter: blur(10px);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.logo {
+    font-size: var(--font-size-2xl);
+    font-weight: bold;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.desktopNav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .desktopNav {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-xl);
+    }
+}
+
+.navLink {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--text);
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: var(--primary);
+}
+
+.active {
+    color: var(--primary);
+}
+
+.themeToggle {
+    padding: var(--spacing-sm);
+    border-radius: 50%;
+    background-color: var(--card-bg);
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.themeToggle:hover {
+    background-color: var(--card-shadow);
+}
+
+.mobileNav {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+@media (min-width: 768px) {
+    .mobileNav {
+        display: none;
+    }
+}
+
+.menuButton {
+    padding: var(--spacing-sm);
+    border-radius: 0.25rem;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobileMenu {
+    background-color: var(--background);
+    box-shadow: 0 4px 6px -1px var(--card-shadow);
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.themeToggle {
+    color: var(--text-color);
+}
+
+.mobileMenuContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+.mobileNavLink {
+    padding: var(--spacing-sm) 0;
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--text);
+    transition: color 0.3s ease;
+}
+
+.mobileNavLink:hover {
+    color: var(--primary);
+}
+
+.mobileNavLink.active {
+    color: var(--primary); }

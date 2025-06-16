@@ -1,0 +1,25 @@
+.about {
+    padding: var(--spacing-2xl) 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.content {
+    color: var(--text);
+    line-height: 1.8;
+    font-size: var(--font-size-lg);
+}
+
+.content p {
+    margin-bottom: var(--spacing-lg);
+}
+
+.content h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: bold;
+    margin: var(--spacing-xl) 0 var(--spacing-md);
+    color: var(--primary); }

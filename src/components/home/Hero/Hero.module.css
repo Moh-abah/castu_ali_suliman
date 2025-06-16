@@ -1,0 +1,106 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), url('/hero-bg.jpg'));
+            background-size: cover;
+            background-position: center;
+    }
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .content {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .content {
+            text-align: right;
+        }
+    }
+
+    .contentInner {
+        max-width: 48rem;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+        .contentInner {
+            margin-left: auto;
+        }
+    }
+
+    .title {
+        font-size: var(--font-size-4xl);
+        font-weight: bold;
+        color: white;
+        margin-bottom: var(--spacing-md);
+    }
+
+    @media (min-width: 768px) {
+        .title {
+            font-size: var(--font-size-5xl);
+        }
+    }
+
+    .title span {
+        color: var(--accent);
+    }
+
+    .subtitle {
+        font-size: var(--font-size-xl);
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: var(--spacing-xl);
+    }
+
+    @media (min-width: 768px) {
+        .subtitle {
+            font-size: var(--font-size-2xl);
+        }
+    }
+
+    .buttons {
+        display: flex;
+        gap: var(--spacing-md);
+        justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+        .buttons {
+            justify-content: flex-start;
+        }
+    }
+
+    .scrollIndicator {
+        position: absolute;
+        bottom: var(--spacing-2xl);
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        40% {
+            transform: translateX(-50%) translateY(-20px);
+        }
+
+        60% {
+            transform: translateX(-50%) translateY(-10px);
+        } }
