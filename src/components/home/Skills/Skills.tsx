@@ -3,24 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SectionTitle from '../../ui/SectionTitle/SectionTitle';
 import styles from './Skills.module.css';
-
-const skills = [
-    { name: 'فوتوشوب', level: 95, color: '#31A8FF' },
-    { name: 'إليستريتور', level: 90, color: '#FF9A00' },
-    { name: 'فجورا', level: 85, color: '#6BC069' },
-    { name: 'أفتر إفكتس', level: 75, color: '#9999FF' },
-    { name: 'تصميم الهوية', level: 90, color: '#FF6B6B' },
-    { name: 'تصميم واجهات', level: 80, color: '#4ECDC4' },
-];
-
-const experienceItems = [
-    { title: 'تصميم الشعارات', icon: '🎨', count: '150+' },
-    { title: 'هويات بصرية', icon: '🖌️', count: '45' },
-    { title: 'تصاميم مواقع', icon: '💻', count: '30' },
-    { title: 'بروشورات', icon: '📄', count: '80' },
-    { title: 'إعلانات', icon: '📢', count: '120' },
-    { title: 'تصاميم سوشيال ميديا', icon: '📱', count: '200+' },
-];
+import { skillsData } from '../../../data/content'; // ✅ استيراد البيانات من الملف الخارجي
 
 const Skills = () => {
     return (
@@ -38,7 +21,7 @@ const Skills = () => {
                         </h3>
 
                         <div className={styles.skillsList}>
-                            {skills.map((skill, index) => (
+                            {skillsData.technicalSkills.map((skill, index) => (
                                 <div key={index} className={styles.skillItem}>
                                     <div className={styles.skillHeader}>
                                         <span className={styles.skillName}>{skill.name}</span>
@@ -65,7 +48,7 @@ const Skills = () => {
                         </h3>
 
                         <div className={styles.experienceGrid}>
-                            {experienceItems.map((item, index) => (
+                            {skillsData.experienceItems.map((item, index) => (
                                 <motion.div
                                     key={index}
                                     className={styles.experienceItem}

@@ -19,7 +19,7 @@ const Projects = () => {
 
                 <motion.div
                     className={styles.projectsGrid}
-                    initial="hidden"
+                    initial=""
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
                     variants={{
@@ -31,13 +31,14 @@ const Projects = () => {
                         }
                     }}
                 >
-                    {projects.slice(0, 3).map((project) => (
+                    {projects.slice(0, 6).map((project) => (
                         <ProjectCard key={project.id} project={project} />
                     ))}
                 </motion.div>
 
                 <div className={styles.buttonContainer}>
-                    <Button href="/projects">
+                    <Button href="#projects">
+                        
                         تصفح جميع المشاريع
                     </Button>
                 </div>
