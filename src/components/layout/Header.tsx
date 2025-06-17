@@ -40,10 +40,10 @@ const Header = () => {
     }, []);
 
     const navLinks = [
-        { name: 'الرئيسية', path: '/' },
-        { name: 'المشاريع', path: '/projects' },
-        { name: 'عنّي', path: '/about' },
-        { name: 'اتصل بي', path: '/contact' },
+        { name: 'الرئيسية', path: '#hero' },
+        { name: 'المشاريع', path: '#projects' },
+        { name: 'عنّي', path: '#about' },
+        { name: 'اتصل بي', path: '#contact' },
     ];
 
     return (

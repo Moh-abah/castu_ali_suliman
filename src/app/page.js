@@ -20,11 +20,11 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <section id="hero"><Hero /></section>
+        <section id="about"><About /></section>
+        <section id="skills"><Skills /></section>
+        <section id="projects"><Projects /></section>
+        <section id="contact"><Contact /></section>
       </Layout>
     </>
   );
